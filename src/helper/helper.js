@@ -1,5 +1,15 @@
 import { ACTIONS } from '../reducer/reducer'
 
+
+
+export const setCountryValue = async (e, dispatch) => {
+  dispatch({
+    type: ACTIONS.SET_COUNTRY,
+    country: e.target.value
+})
+}
+
+
 export const getCountriesData = async (dispatch) => {
     await fetch("https://disease.sh/v3/covid-19/countries")
       .then((response) => response.json())

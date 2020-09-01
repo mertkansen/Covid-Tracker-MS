@@ -1,8 +1,10 @@
 export const ACTIONS = {
+    SET_COUNTRY: "set-country",
     SET_COUNTRIES: "set-countries",
   };
   
 export const initialState = {
+    country: 'worldwide',
     countries: [],
   };
   
@@ -13,6 +15,11 @@ export const initialState = {
           ...state,
           countries: action.countries,
         };
+        case ACTIONS.SET_COUNTRY:
+            return {
+                ...state,
+                country: action.country
+            }
       default:
         return state;
     }
