@@ -1,5 +1,12 @@
 .app {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    height: 100vh;
+}
 
+.app__left {
+    flex: 0.9;
 }
 
 .app__header {
@@ -7,4 +14,41 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.app__dropDown {
+    background-color: white;
+}
+
+.app__stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app__header > h1 {
+    color: red;
+    font-size: 2rem;
+}
+
+.app__right {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+}
+
+.app__right .MuiCardContent-root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.app__graph {
+    flex-grow: 1;
+}
+
+/* When the screen is under 990px its column, after that its direction is row */
+@media (max-width: 990px) {
+    .app {
+        flex-direction: column;
+    }
 }
